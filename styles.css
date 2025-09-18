@@ -12,11 +12,14 @@ h1{
 
 #container-div{
     background-color: azure;
-     width: 700px;
-     height: 100vh;
+    width: 600px;
+    height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: center;
     margin: auto;
+    flex-wrap: wrap;
+    padding: 10px;
 }
 
 .button-div{

@@ -16,4 +16,4 @@ for(let i = 0; i < numberOfGrid; i++){
     containerDiv.appendChild(div)
 }
 }
-gridSquares(16);
+gridSquares(256);
