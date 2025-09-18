@@ -8,6 +8,7 @@ h1{
     text-align: center;
     color: gray;
     font-family: "Silkscreen", sans-serif;
+    margin: 0.2rem;
 }
 
 #container-div{
@@ -25,17 +26,31 @@ h1{
 .button-div{
     display: flex;
     justify-content: center;
-    margin: auto; 
+    margin: 1.2rem; 
+    gap: 10px;
 }
 
-button{
-    padding:4px;
+.choose-color{
+    background-color: black;
+    color: azure;
+    padding:8px;
+    border-radius: 8px;
+    font-size: 18px;
+    font-family: "Silkscreen", sans-serif;
 }
 
+.clear-btn{
+    background-color: white;
+    font-family: "Silkscreen", sans-serif;
+    color: black;
+    padding:8px;
+    border-radius: 8px;
+    font-size: 18px;
+}
 .grid-square{
     width: 2rem;
     height: 2rem;
-    background-color: rgb(171, 228, 175);
+    background-color: #abe4af;
     padding: 4px;
     margin: 2px;
 }
