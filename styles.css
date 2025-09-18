@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin:0;
+}
+
+h1{
+    text-align: center;
+    color: gray;
+    font-family: "Silkscreen", sans-serif;
+}
+
+#container-div{
+    background-color: azure;
+     width: 700px;
+     height: 100vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.button-div{
+    display: flex;
+    justify-content: center;
+    margin: auto; 
+}
+
+button{
+    padding:4px;
+}
+
+.grid-square{
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(171, 228, 175);
+    padding: 4px;
+    margin: 2px;
+}
