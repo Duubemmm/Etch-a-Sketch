@@ -1,63 +1,170 @@
-*{
-    box-sizing: border-box;
+* {
+    margin: 0;
     padding: 0;
-    margin:0;
+    box-sizing: border-box;
 }
 
-h1{
-    text-align: center;
-    color: gray;
-    font-family: "Silkscreen", sans-serif;
-    margin: 0.2rem;
+body {
+    min-height: 100vh;
+    padding: 20px;
 }
-.container{
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px);
+    overflow: hidden;
     display: flex;
+    justify-content: space-between;
 }
 
-#container-div{
-    background-color:gray;
+.h1-div {
+    color: gray;
+    font-family: Silkscreen;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.clear-btn {
+    background: gray;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    margin: 2rem;
+}
+
+.clear-btn:hover {
+    background: rgb(146, 144, 144);
+}
+
+.rainbow-picker-input {
+    background: #96ceb4;
+    color: white;
+    border: none;
+    padding: 6px;
+    border-radius: 5px;
+}
+
+.rainbow-picker-input:hover {
+    background: #a0aec0;
+}
+
+/* Color picker styles */
+.color-picker-input {
+    width: 30px;
+    height: 30px;
+    border: 3px solid #d2ddec;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+}
+
+.color-picker-input:hover {
+    border-color: #4facfe;
+    transform: scale(1.1);
+    box-shadow: 0 8px 25px rgba(79, 172, 254, 0.3);
+}
+
+.grid-size-slider {
     width: 100%;
-    max-width: 600px;
+    height: 8px;
+    border-radius: 5px;
+    background: #e2e8f0;
+    margin: 0.5rem;
+    cursor: pointer;
+}
+
+.grid-size-display {
+    font-size: 18px;
+    font-weight: 700;
+    color: #4a5568;
+    text-align: center;
+    padding: 2px 10px;
+    background: white;
+    border-radius: 8px;
+    border: 2px solid #e2e8f0;
+    min-width: 100px;
+    margin: 1rem;
+}
+
+/* Grid container */
+.grid-container {
+    padding: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: auto;
-    flex-wrap: wrap;
-    padding: 10px;
+    min-height: 400px;
 }
 
-.button-div{
-    display: flex;
-    flex-direction: column;
-    margin: 1.2rem; 
-    gap: 10px;
-}
-
-.choose-color{
-    background-color: black;
-    color: azure;
-    padding:8px;
+#container-div {
+    display: grid;
+    width: min(90vw, 600px);
+    height: min(90vw, 600px);
+    max-width: 700px;
+    max-height: 700px;
+    border: 8px solid #4a5568;
     border-radius: 8px;
-    font-size: 14px;
-    font-family: "Silkscreen", sans-serif;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
-.clear-btn{
+.grid-square {
     background-color: white;
-    font-family: "Silkscreen", sans-serif;
-    color: black;
-    padding:8px;
-    border-radius: 8px;
-    font-size: 14px;
-}
-.grid-square{
-    width: 2rem;
-    height: 2rem;
-    background-color: #abe4af;
+    border: 0.2px solid #f1f5f9;
+    transition: all 0.1s ease;
+    cursor: crosshair;
     padding: 4px;
-    margin: 2px;
 }
 
-.grid-number{
-    font-family: SilkScreen;
+/* Responsive breakpoints */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+    
+    .main-container {
+        border-radius: 15px;
+    }
+    
+    .h1 {
+        font-size: 2.5rem;
+    }
+    
+    #container-div {
+        width: min(85vw, 400px);
+        height: min(85vw, 400px);
+    }
+    
+    .grid-container {
+        padding: 20px;
+        min-height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .h1 {
+        font-size: 2rem;
+        letter-spacing: 1px;
+    }
+
+    .color-picker-input {
+        width: 50px;
+        height: 50px;
+    }
+    
+    #container-div {
+        width: min(80vw, 350px);
+        height: min(80vw, 350px);
+        border-width: 3px;
+    }
+    
+    .grid-size-display {
+        font-size: 16px;
+    }
 }
