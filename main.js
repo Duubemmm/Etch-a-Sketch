@@ -54,12 +54,10 @@ function getColorToPaint() {
 // Grid creation function
 function createGridSquares(gridSize) {
     const containerDiv = document.getElementById("container-div");
+    const totalSquares = gridSize * gridSize;
     containerDiv.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     containerDiv.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
-    const totalSquares = gridSize * gridSize;
-    
-        gridSizeDisplay.textContent = `${gridSize} x ${gridSize}`;
-    
+    gridSizeDisplay.textContent = `${gridSize} x ${gridSize}`;
     
     for(let i = 0; i < totalSquares; i++) {
         const div = document.createElement("div");
