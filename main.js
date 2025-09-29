@@ -54,6 +54,10 @@ function getColorToPaint() {
 // Grid creation function
 function createGridSquares(gridSize) {
     const containerDiv = document.getElementById("container-div");
+
+    // Clear previous grid
+    containerDiv.innerHTML = "";
+
     const totalSquares = gridSize * gridSize;
     containerDiv.style.gridTemplateColumns = `repeat(${gridSize}, 1fr)`;
     containerDiv.style.gridTemplateRows = `repeat(${gridSize}, 1fr)`;
